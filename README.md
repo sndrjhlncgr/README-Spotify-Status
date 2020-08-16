@@ -1,3 +1,15 @@
+<h1 align="center">Spotify Status (README)</h1>
+<p align="center">View what you listen in spotify.</p>
+
+<p align="center">
+   <a href="https://github.com/sndrjhlncgr/README-Spotify-Status/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/sndrjhlncgr/README-Spotify-Status"></a>
+   <a href="https://github.com/sndrjhlncgr/README-Spotify-Status/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/sndrjhlncgr/README-Spotify-Status"></a>
+   <a href="https://github.com/sndrjhlncgr/README-Spotify-Status/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/sndrjhlncgr/README-Spotify-Status"></a>
+   <a href="https://github.com/sndrjhlncgr/README-Spotify-Status/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/sndrjhlncgr/README-Spotify-Status"></a>
+<p align="center">
+
+![Image of Sandro Cagara](https://i.ibb.co/0Vy3VV1/README-Spotify-Status.jpg)
+
 # How to use
 
 ## Spotify for Developers
