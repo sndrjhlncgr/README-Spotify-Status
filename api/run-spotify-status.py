@@ -101,7 +101,7 @@ def makeSVG(data):
         "spotifyIcon": spotifyIcon,
         "songName": songName,
         "albumCover": albumCover,
-        "barColor": BAR_COLOR
+        "barColor": SPOTIFY_BAR_COLOR
     }
 
     return render_template("spotifyStatus.html.j2", **spotifyObject)
