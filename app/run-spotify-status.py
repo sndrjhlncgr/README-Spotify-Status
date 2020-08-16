@@ -14,7 +14,7 @@ SPOTIFY_URL_REFRESH_TOKEN = "https://accounts.spotify.com/api/token"
 SPOTIFY_URL_NOW_PLAYING = "https://api.spotify.com/v1/me/player/currently-playing"
 SPOTIFY_URL_RECENTLY_PLAY = "https://api.spotify.com/v1/me/player/recently-played?limit=10"
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="components")
 
 def getAuth():
     return b64encode(f"{SPOTIFY_CLIENT_ID}:{SPOTIFY_SECRET_ID}".encode()).decode("ascii")
@@ -98,7 +98,7 @@ def makeSVG(data):
         "albumCover": albumCover,
     }
 
-    return render_template("spotify.html.j2", **spotifyObject)
+    return render_template("spotifyStatus.html.j2", **spotifyObject)
 
 
 @app.route("/", defaults={"path": ""})
