@@ -207,21 +207,20 @@
                   text-align: right;
                 }
                 .ribbon span {
-                  font-size: 10px;
-                  font-weight: bold;
-                  color: #FFF;
-                  text-transform: uppercase;
-                  text-align: center;
-                  line-height: 20px;
-                  transform: rotate(45deg);
-                  -webkit-transform: rotate(45deg);
-                  width: 100px;
-                  display: block;
-                  background: #79A70A;
-                  background: linear-gradient(#1DB954 0%, #1DB954 100%);
-                  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
-                  position: absolute;
-                  top: 19px; right: -21px;
+                      font-size: 10px;
+                      font-weight: bold;
+                      color: #FFF;
+                      text-align: center;
+                      line-height: 20px;
+                      transform: rotate(45deg);
+                      -webkit-transform: rotate(45deg);
+                      width: 100px;
+                      display: block;
+                      background: #79A70A;
+                      background: linear-gradient(#1DB954 0%, #1DB954 100%);
+                      box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+                      position: absolute;
+                      top: 19px; right: -21px;
                 }
                 .ribbon span::before {
                   content: "";
@@ -241,13 +240,27 @@
                   border-bottom: 3px solid transparent;
                   border-top: 3px solid #1DB954;
                 }
+
+                .spotify-logo {
+                    width:12px;
+                    height: 12px;
+                    margin-bottom:-3px;
+                    margin-right: 1px;
+                    color: #FFF;
+                }
                 {{soundVisualizerCSS|safe}}
             </style>
 
             {% if songName %}
 
             <div class="main">
-                <div class="ribbon"><span>Spotify</span></div>
+                <div class="ribbon">
+                    <span>
+                        <img src="https://simpleicons.org/icons/spotify.svg" class="spotify-logo"/>
+                        Spotify
+
+                    </span>
+                </div>
                 <a class="art" href="{}" target="_BLANK">
                     <center>
                             <img src="data:image/png;base64, {{albumCover}}" class="album-cover" />
