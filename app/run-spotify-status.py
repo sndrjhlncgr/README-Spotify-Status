@@ -16,6 +16,7 @@ SPOTIFY_URL_RECENTLY_PLAY = "https://api.spotify.com/v1/me/player/recently-playe
 
 app = Flask(__name__)
 
+
 def getAuth():
     return b64encode(f"{SPOTIFY_CLIENT_ID}:{SPOTIFY_SECRET_ID}".encode()).decode("ascii")
 
@@ -66,13 +67,15 @@ def soundVisualizer(soundBars):
         soundVisualizerCSS += ".spectrograph__bar:nth-child({0}) {{-webkit-animation-name: {1};animation-name: {1};" \
                               "-webkit-animation-duration: {2}ms;animation-duration: {3}ms;}}".format(NTH,
                                                                                                       ANIMATIONS[z],
-                                                                                                      str(START_BAR),                                                                                                   str(START_BAR))
+                                                                                                      str(START_BAR),
+                                                                                                      str(START_BAR))
     return soundVisualizerCSS
 
 
 def loadImageB64(url):
     resposne = requests.get(url)
     return b64encode(resposne.content).decode("ascii")
+
 
 def makeSVG(data):
     soundBars = 48
