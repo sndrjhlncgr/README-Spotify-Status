@@ -37,7 +37,16 @@ curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Authorizat
 * Register on [Vercel](https://vercel.com/)
 
 * Create project linked to your forked respository
-  <br/>
   
   ![Vercel](https://i.ibb.co/sHhywHD/dasddas.jpg)
 
+* Add Project Name and Environment Variables:
+  - `SPOTIFY_REFRESH_TOKEN`
+  - `SPOTIFY_CLIENT_ID`
+  - `SPOTIFY_SECRET_ID`
+  - `SPOTIFY_BAR_COLOR` 
+     - `Hex Color Don't Include #`
+        
+  ![Vercel](https://i.ibb.co/vv5z4yP/Untitled.png)
+  
+ * DEPLOY!
