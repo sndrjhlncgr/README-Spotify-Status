@@ -76,7 +76,6 @@ def loadImageB64(url):
     resposne = requests.get(url)
     return b64encode(resposne.content).decode("ascii")
 
-
 def makeSVG(data):
     soundBars = 48
     soundVisualizerBar = "".join(["<div class='spectrograph__bar'></div>" for i in range(soundBars)])
