@@ -56,3 +56,10 @@ curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Authorizat
 ### Spotify Playing Now
 [<img src="https://{DOMAIN_OF_YOUR_VERCEL_APP}/api/run-spotify-status" alt="Your alt what" width="350" />](LINK_TO_YOUR_ACCOUNT)
 ```
+
+## Contribution
+
+Feel Free to contribute, PR are the most welcome :)
+
+## License
+Copyright (c) 2020 Sandro Cagara | Spotify Status
