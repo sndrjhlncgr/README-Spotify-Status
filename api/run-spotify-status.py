@@ -75,8 +75,8 @@ def soundVisualizer(soundBars):
 
 
 def loadImageB64(url):
-    resposne = requests.get(url)
-    return b64encode(resposne.content).decode("ascii")
+    response = requests.get(url)
+    return b64encode(response.content).decode("ascii")
 
 def makeSVG(data):
     soundBars = 47
@@ -93,11 +93,13 @@ def makeSVG(data):
     albumCover = loadImageB64(item["album"]["images"][1]["url"])
     artistName = item["artists"][0]["name"].replace("&", "&amp;")
     songName = item["name"].replace("&", "&amp;")
+    spotifyIcon = "https://simpleicons.org/icons/spotify.svg"
 
     spotifyObject = {
         "soundVisualizerBar": soundVisualizerBar,
         "soundVisualizerCSS": soundVisualizerCSS,
         "artistName": artistName,
+        "spotifyIcon": spotifyIcon,
         "songName": songName,
         "albumCover": albumCover,
         "barColor": BAR_COLOR
