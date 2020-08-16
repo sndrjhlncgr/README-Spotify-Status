@@ -242,9 +242,9 @@
                 }
 
                 .spotify-logo {
-                    width:12px;
-                    height: 12px;
-                    margin-bottom:-3px;
+                    width:47%;
+                    height: 47%;
+                    margin-bottom:-4px;
                     margin-right: 1px;
                     color: #FFF;
                 }
@@ -256,9 +256,7 @@
             <div class="main">
                 <div class="ribbon">
                     <span>
-                        <img src="https://simpleicons.org/icons/spotify.svg" class="spotify-logo"/>
-                        Spotify
-
+                        <img src="data:image/png;base64, {{spotifyIcon}}" class="spotify-logo"/>
                     </span>
                 </div>
                 <a class="art" href="{}" target="_BLANK">
@@ -266,7 +264,6 @@
                             <img src="data:image/png;base64, {{albumCover}}" class="album-cover" />
                     </center>
                 </a>
-
                 <div class="text">
                     <div class="song-info">
                         <div class="song">{{songName}}</div>
