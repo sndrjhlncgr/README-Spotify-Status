@@ -13,7 +13,7 @@ SPOTIFY_URL_RECENTLY_PLAY = "https://api.spotify.com/v1/me/player/recently-playe
 SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
 SPOTIFY_SECRET_ID = os.getenv("SPOTIFY_SECRET_ID")
 SPOTIFY_REFRESH_TOKEN = os.getenv("SPOTIFY_REFRESH_TOKEN")
-SPOTIFY_BAR_COLOR = os.getenv("BAR_COLOR")
+SPOTIFY_BAR_COLOR = os.getenv("SPOTIFY_BAR_COLOR")
 
 app = Flask(__name__, template_folder="components")
 
