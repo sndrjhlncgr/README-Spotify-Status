@@ -49,4 +49,10 @@ curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Authorizat
         
   ![Vercel](https://i.ibb.co/vv5z4yP/Untitled.png)
   
- * DEPLOY!
+ * Deploy
+
+## Put this in your README.md
+``` 
+### Spotify Playing Now
+[<img src="https://{DOMAIN_OF_YOUR_VERCEL_APP}/api/run-spotify-status" alt="Your alt what" width="350" />](LINK_TO_YOUR_ACCOUNT)
+```
