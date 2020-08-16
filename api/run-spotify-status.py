@@ -14,6 +14,8 @@ SPOTIFY_URL_REFRESH_TOKEN = "https://accounts.spotify.com/api/token"
 SPOTIFY_URL_NOW_PLAYING = "https://api.spotify.com/v1/me/player/currently-playing"
 SPOTIFY_URL_RECENTLY_PLAY = "https://api.spotify.com/v1/me/player/recently-played?limit=10"
 
+BAR_COLOR = "#ff19c1"
+
 app = Flask(__name__, template_folder="components")
 
 
@@ -77,7 +79,7 @@ def loadImageB64(url):
     return b64encode(resposne.content).decode("ascii")
 
 def makeSVG(data):
-    soundBars = 48
+    soundBars = 47
     soundVisualizerBar = "".join(["<div class='spectrograph__bar'></div>" for i in range(soundBars)])
     soundVisualizerCSS = soundVisualizer(soundBars)
 
@@ -98,6 +100,7 @@ def makeSVG(data):
         "artistName": artistName,
         "songName": songName,
         "albumCover": albumCover,
+        "barColor": BAR_COLOR
     }
 
     return render_template("spotifyStatus.html.j2", **spotifyObject)
