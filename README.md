@@ -1,5 +1,5 @@
 <h1 align="center">Spotify Status (README)</h1>
-<p align="center">View what you listen in spotify.</p>
+<p align="center">View what you listen at spotify.</p>
 
 <p align="center">
    <a href="https://github.com/sndrjhlncgr/README-Spotify-Status/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/sndrjhlncgr/README-Spotify-Status"></a>
