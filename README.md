@@ -8,7 +8,7 @@
    <a href="https://github.com/sndrjhlncgr/README-Spotify-Status/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/sndrjhlncgr/README-Spotify-Status"></a>
 <p align="center">
 
-![Image of Sandro Cagara](https://i.ibb.co/0Vy3VV1/README-Spotify-Status.jpg)
+![Image of Sandro Cagara](https://i.ibb.co/M73hcgd/README-Spotify-Status-V1.png)
 
 # How to use
 
