@@ -9,7 +9,11 @@
 <p align="center">
 
 ![Image of Sandro Cagara](https://i.ibb.co/M73hcgd/README-Spotify-Status-V1.png)
-
+<p align="center">
+   <h2>Demo</h2>
+   <img src="https://spotify-status.vercel.app/api/run-spotify-status" alt="s4nx Playing Now" width="500" />
+<p align="center">
+   
 # How to use
 
 ## Spotify for Developers
