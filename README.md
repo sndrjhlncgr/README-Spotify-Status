@@ -14,7 +14,8 @@
    <img src="https://spotify-status.vercel.app/api/run-spotify-status" alt="s4nx Playing Now" width="500" />
 <p align="center">
 
-### Spotify for Developers
+Spotify for Developers
+-----
 
 * Create a [Spotify for Developers](https://developer.spotify.com/dashboard/applications) account
 * Get Credentials
@@ -24,7 +25,8 @@
 * Find **Redirect URIs**:
     * Add `http://localhost/callback/`
 
-### Get the Refresh Token from spotify
+Get the Refresh Token from spotify
+-----
 
 * Navigate to the following URL:
   <br/>
@@ -45,7 +47,8 @@ curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Authorizat
 
 * Then save the Refresh token
 
-### Configure Vercel Application
+Configure Vercel Application
+------
 * Fork this [Spotify Status](https://github.com/sndrjhlncgr/Spotify-Status)
 
 * Register on [Vercel](https://vercel.com/)
@@ -65,15 +68,17 @@ curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Authorizat
   
  * Deploy
 
-### Put this in your README.md
+Put this in your README.md
+------
 ``` 
 ### Spotify Playing Now
 [<img src="https://{DOMAIN_OF_YOUR_VERCEL_APP}/api/run-spotify-status" alt="Your alt what" width="350" />](LINK_TO_YOUR_ACCOUNT)
 ```
 
-### Contribution
-
+Contribution
+------
 Feel Free to contribute, PR are the most welcome :)
 
-### License
+License
+------
 Copyright (c) 2020 Sandro Cagara | Spotify Status
