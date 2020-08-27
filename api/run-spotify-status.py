@@ -85,7 +85,7 @@ def convertMsToMin(ms):
 
 
 def makeSVG(data):
-    soundBars = 47
+    soundBars = 41
     soundVisualizerBar = "".join(["<div class='spectrograph__bar'></div>" for i in range(soundBars)])
     soundVisualizerCSS = soundVisualizer(soundBars)
 
