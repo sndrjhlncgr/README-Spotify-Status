@@ -68,14 +68,21 @@
                     float: left !important;
                 }
 
-                .logo {
+                .rotate{
+                  animation: rotate 10s linear infinite;
+                }
 
+                @keyframes rotate{
+                  to{ transform: rotate(360deg); }
                 }
 
                 .album-cover {
-                    border-radius: 13px;
+                    border-radius: 50%;
                     height: 100px;
                     width: 100px;
+                    -webkit-box-shadow: 0px 0px 5px 0px rgba(92,91,92,1);
+-moz-box-shadow: 0px 0px 5px 0px rgba(92,91,92,1);
+box-shadow: 0px 0px 5px 0px rgba(92,91,92,1);
                 }
 
                 @keyframes sound {
@@ -260,7 +267,7 @@
                 </div>
                 <a class="art" href="{}" target="_BLANK">
                     <center>
-                            <img src="data:image/png;base64, {{albumCover}}" class="album-cover" />
+                            <img src="data:image/png;base64, {{albumCover}}" class="album-cover rotate" />
                     </center>
                 </a>
                 <div class="text">
