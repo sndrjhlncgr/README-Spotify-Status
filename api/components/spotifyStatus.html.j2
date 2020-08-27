@@ -81,8 +81,10 @@
                     height: 100px;
                     width: 100px;
                     -webkit-box-shadow: 0px 0px 5px 0px rgba(92,91,92,1);
--moz-box-shadow: 0px 0px 5px 0px rgba(92,91,92,1);
-box-shadow: 0px 0px 5px 0px rgba(92,91,92,1);
+                    -moz-box-shadow: 0px 0px 5px 0px rgba(92,91,92,1);
+                    box-shadow: 0px 0px 5px 0px rgba(92,91,92,1);
+                    border-color: white;
+                    border-style: solid;
                 }
 
                 @keyframes sound {
@@ -254,6 +256,17 @@ box-shadow: 0px 0px 5px 0px rgba(92,91,92,1);
                     margin-bottom:-3px;
                     margin-right: 1px;
                 }
+
+                .explicit-music {
+                    background-color: #9c9c9c;
+                    border-radius: 3px;
+                    font-size: 10px;
+                    color:white;
+                    vertical-align: baseline;
+                    padding: 1px 3px 1px 3px;
+                    margin-left: 3px;
+
+                }
                 {{soundVisualizerCSS|safe}}
             </style>
 
@@ -273,7 +286,11 @@ box-shadow: 0px 0px 5px 0px rgba(92,91,92,1);
                 <div class="text">
                     <div class="song-info">
                         <div class="song">{{songName}}</div>
-                        <div class="artist">{{artistName}}</div>
+                        <div class="artist">{{artistName}}
+                        {% if explicit %}
+                            <span class="explicit-music">EXPLICIT</span>
+                        {% endif %}
+                        </div>
                     </div>
 
                     <div class="spectrograph">

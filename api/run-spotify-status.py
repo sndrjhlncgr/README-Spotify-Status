@@ -10,10 +10,10 @@ SPOTIFY_URL_REFRESH_TOKEN = "https://accounts.spotify.com/api/token"
 SPOTIFY_URL_NOW_PLAYING = "https://api.spotify.com/v1/me/player/currently-playing"
 SPOTIFY_URL_RECENTLY_PLAY = "https://api.spotify.com/v1/me/player/recently-played?limit=10"
 
-SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
-SPOTIFY_SECRET_ID = os.getenv("SPOTIFY_SECRET_ID")
-SPOTIFY_REFRESH_TOKEN = os.getenv("SPOTIFY_REFRESH_TOKEN")
-SPOTIFY_BAR_COLOR = os.getenv("SPOTIFY_BAR_COLOR")
+SPOTIFY_CLIENT_ID = "70a153ec08c3465fa39e2f2b3ed6f19d"
+SPOTIFY_SECRET_ID = "69375ea0a426477293cbfdef99dcbde0"
+SPOTIFY_REFRESH_TOKEN = "AQDXZvg5_WVeraaPBQlyHfzsM2y1zekjGoi0UaDhhS18VcsyRFtvqQpZdUrNt7O0bdNrtO4waX3ZDHvCu9Dbz-xWSGA8RdSRsqV-k50__ouxpUntbTIiaxdFtwEe2l0BdxI"
+SPOTIFY_BAR_COLOR = "#fff"
 
 app = Flask(__name__, template_folder="components")
 
@@ -77,6 +77,13 @@ def loadImageB64(url):
     response = requests.get(url)
     return b64encode(response.content).decode("ascii")
 
+
+def convertMsToMin(ms):
+    seconds = int((ms / 1000) % 60)
+    minutes = int((ms / (1000 * 60)) % 60)
+    return str("%d:%d" % (minutes, seconds))
+
+
 def makeSVG(data):
     soundBars = 47
     soundVisualizerBar = "".join(["<div class='spectrograph__bar'></div>" for i in range(soundBars)])
@@ -89,6 +96,10 @@ def makeSVG(data):
         item = recent_plays["items"][idx]["track"]
     else:
         item = data["item"]
+
+    musicLink = item["album"]["external_urls"]
+    musicTime = convertMsToMin(item["duration_ms"])
+    explicit = item["explicit"]
     albumCover = loadImageB64(item["album"]["images"][1]["url"])
     artistName = item["artists"][0]["name"].replace("&", "&amp;")
     songName = item["name"].replace("&", "&amp;")
@@ -101,7 +112,10 @@ def makeSVG(data):
         "spotifyIcon": spotifyIcon,
         "songName": songName,
         "albumCover": albumCover,
-        "barColor": SPOTIFY_BAR_COLOR
+        "barColor": SPOTIFY_BAR_COLOR,
+        "explicit": explicit,
+        "musicTime": musicTime,
+        "musicLink": musicLink
     }
 
     return render_template("spotifyStatus.html.j2", **spotifyObject)
