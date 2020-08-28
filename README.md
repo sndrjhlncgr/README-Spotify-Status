@@ -8,7 +8,7 @@
    <a href="https://github.com/sndrjhlncgr/README-Spotify-Status/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/sndrjhlncgr/README-Spotify-Status"></a>
 <p align="center">
 
-![Image of Sandro Cagara](https://i.ibb.co/M73hcgd/README-Spotify-Status-V1.png)
+![Image of Sandro Cagara](https://i.ibb.co/Tmjxnhs/README-Spotify-Status-v2.jpg)
 <p align="center">
    <h3>Demo</h3>
    <img src="https://spotify-status.vercel.app/api/run-spotify-status" alt="s4nx Playing Now" width="500" />
