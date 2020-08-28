@@ -13,7 +13,7 @@
                     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
                     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
                     width:99%;
-                    padding: 10px 0px 7px 0px;
+                    padding: 3px 0px 7px 0px;
                     border-radius: 60px 13px 60px 60px;
                     position: relative;
 
@@ -41,10 +41,13 @@
                     float: left;
                     width: 27%;
                     margin-left: -1px;
+                    padding-top:5px;
+                    margin-bottom: -2px !important;
                 }
 
                 .text {
                     width: 72%;
+                    padding-top:5px;
                 }
 
                 .song {
@@ -265,7 +268,14 @@
                     vertical-align: baseline;
                     padding: 1px 3px 1px 3px;
                     margin-left: 3px;
-
+                }
+                .centered {
+                  position: absolute;
+                  top: 50%;
+                  left: 13%;
+                  transform: translate(-50%, -50%);
+                  color: white;
+                  font-size: 20px;
                 }
                 {{soundVisualizerCSS|safe}}
             </style>
@@ -281,6 +291,7 @@
                 <a class="art" href="{}" target="_BLANK">
                     <center>
                             <img src="data:image/png;base64, {{albumCover}}" class="album-cover rotate" />
+                            <div class="centered">⦿</div>
                     </center>
                 </a>
                 <div class="text">
