@@ -67,7 +67,7 @@ div {
 }
 
 .rotate{
-  animation: rotate 10s linear infinite;
+  animation: rotate 9s linear infinite;
 }
 
 @keyframes rotate{
