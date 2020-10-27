@@ -1,8 +1,283 @@
 <svg width="480" height="133" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <foreignObject width="480" height="133">
         <div xmlns="http://www.w3.org/1999/xhtml" class="container">
-            <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='styles.css') }}"></link>
             <style>
+
+                div {
+                    font-family: Roboto;
+                }
+
+                .main {
+
+                    display: flex;
+                    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+                    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+                    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+                    width:99%;
+                    padding: 3px 0px 7px 0px;
+                    border-radius: 60px 13px 60px 60px;
+                    position: relative;
+
+                }
+
+                .container {
+                    margin-left:5px;
+                    padding: 5px 0px 5px 0px;
+                }
+
+                .playing {
+                    font-weight: bold;
+                    color: #53b14f;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .not-play {
+                    color: #ff1616;
+                }
+
+                .art {
+                    float: left;
+                    width: 27%;
+                    margin-left: -1px;
+                    padding-top:5px;
+                    margin-bottom: -2px !important;
+                }
+
+                .text {
+                    width: 72%;
+                    padding-top:5px;
+                }
+
+                .song {
+                    font-size: 20px;
+                    color: #666;
+                    font-weight: bold;
+                    text-align: left;
+                    margin-top: 3px;
+                }
+
+                .song-info {
+                    float: left !important;
+                    width: 90%;
+                }
+
+                .artist {
+                    font-size: 13px;
+                    color: #b3b3b3;
+                    text-align: center;
+                    margin-bottom: 5px;
+                    float: left !important;
+                }
+
+                .rotate{
+                  animation: rotate 10s linear infinite;
+                }
+
+                @keyframes rotate{
+                  to{ transform: rotate(360deg); }
+                }
+
+                .album-cover {
+                    border-radius: 50%;
+                    height: 100px;
+                    width: 100px;
+                    -webkit-box-shadow: 0px 0px 5px 0px rgba(92,91,92,1);
+                    -moz-box-shadow: 0px 0px 5px 0px rgba(92,91,92,1);
+                    box-shadow: 0px 0px 5px 0px rgba(92,91,92,1);
+                    border-color: white;
+                    border-style: solid;
+                }
+
+                @keyframes sound {
+                    0% {
+                        opacity: .35;
+                        height: 3px;
+                    }
+
+                    100% {
+                        opacity: 1;
+                        height: 15px;
+                    }
+                }
+                .spectrograph {
+                    color: #{{barColor|safe}};
+                }
+                .spectrograph {
+                  bottom: 19px;
+                  display: -webkit-box;
+                  position: absolute;
+                  display: flex;
+                  -webkit-box-align: end;
+                          align-items: flex-end;
+                  width: 100%;
+                  height: 20px;
+                  overflow: hidden;
+                  -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='spectrograph' x='0' y='0' width='6px' height='4px' patternUnits='userSpaceOnUse'%3E%3Crect x='0' y='2px' width='6px' height='2px' fill='%23000'/%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23spectrograph)'%3E%3C/rect%3E%3C/svg%3E");
+                          mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='spectrograph' x='0' y='0' width='6px' height='4px' patternUnits='userSpaceOnUse'%3E%3Crect x='0' y='2px' width='6px' height='2px' fill='%23000'/%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23spectrograph)'%3E%3C/rect%3E%3C/svg%3E");
+                }
+                .spectrograph__bar {
+                  margin: 0 1px 0 0;
+                  -webkit-box-flex: 0;
+                          flex: 0 0 6px;
+                  height: 100%;
+                  background: currentColor;
+                  -webkit-transform: translateY(100%);
+                          transform: translateY(100%);
+                  -webkit-transform-origin: center bottom;
+                          transform-origin: center bottom;
+                  -webkit-animation: animation 1.5s steps(5, start) infinite alternate;
+                          animation: animation 1.5s steps(5, start) infinite alternate;
+                  will-change: transform;
+                }
+
+                .spectrograph__bar:last-child {
+                  margin: 0;
+                }
+
+                @-webkit-keyframes animation1 {
+                  0%,
+                    5% {
+                    -webkit-transform: translateY(100%);
+                            transform: translateY(100%);
+                  }
+                  100% {
+                    -webkit-transform: translateY(0);
+                            transform: translateY(0);
+                  }
+                }
+
+                @keyframes animation1 {
+                  0%,
+                    5% {
+                    -webkit-transform: translateY(100%);
+                            transform: translateY(100%);
+                  }
+                  100% {
+                    -webkit-transform: translateY(0);
+                            transform: translateY(0);
+                  }
+                }
+                @-webkit-keyframes animation2 {
+                  0%,
+                    66% {
+                    -webkit-transform: translateY(100%);
+                            transform: translateY(100%);
+                  }
+                  33%,
+                    100% {
+                    -webkit-transform: translateY(0);
+                            transform: translateY(0);
+                  }
+                }
+                @keyframes animation2 {
+                  0%,
+                    66% {
+                    -webkit-transform: translateY(100%);
+                            transform: translateY(100%);
+                  }
+                  33%,
+                    100% {
+                    -webkit-transform: translateY(0);
+                            transform: translateY(0);
+                  }
+                }
+                @-webkit-keyframes animation3 {
+                  33%,
+                    66% {
+                    -webkit-transform: translateY(100%);
+                            transform: translateY(100%);
+                  }
+                  0%,
+                    45%,
+                    100% {
+                    -webkit-transform: translateY(0);
+                            transform: translateY(0);
+                  }
+                }
+                @keyframes animation3 {
+                  33%,
+                    66% {
+                    -webkit-transform: translateY(100%);
+                            transform: translateY(100%);
+                  }
+                  0%,
+                    45%,
+                    100% {
+                    -webkit-transform: translateY(0);
+                            transform: translateY(0);
+                  }
+                }
+
+                .ribbon {
+                  position: absolute;
+                  right: -5px; top: -5px;
+                  z-index: 1;
+                  overflow: hidden;
+                  width: 75px; height: 75px;
+                  text-align: right;
+                }
+                .ribbon span {
+                      font-size: 15px;
+                      font-weight: bold;
+                      color: #FFF;
+                      text-align: center;
+                      line-height: 20px;
+                      transform: rotate(45deg);
+                      -webkit-transform: rotate(45deg);
+                      width: 100px;
+                      display: block;
+                      background: #79A70A;
+                      background: linear-gradient(#1DB954 0%, #1DB954 100%);
+                      box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+                      position: absolute;
+                      top: 19px; right: -21px;
+                }
+                .ribbon span::before {
+                  content: "";
+                  position: absolute; left: 0px; top: 100%;
+                  z-index: -1;
+                  border-left: 3px solid #1DB954;
+                  border-right: 3px solid transparent;
+                  border-bottom: 3px solid transparent;
+                  border-top: 3px solid #1DB954;
+                }
+                .ribbon span::after {
+                  content: "";
+                  position: absolute; right: 0px; top: 100%;
+                  z-index: -1;
+                  border-left: 3px solid transparent;
+                  border-right: 3px solid #1DB954;
+                  border-bottom: 3px solid transparent;
+                  border-top: 3px solid #1DB954;
+                }
+
+                .spotify-logo {
+                    width:52%;
+                    height: 52%;
+                    margin-bottom:-3px;
+                    margin-right: 1px;
+                }
+
+                .explicit-music {
+                    background-color: #9c9c9c;
+                    border-radius: 3px;
+                    font-size: 10px;
+                    color:white;
+                    vertical-align: baseline;
+                    padding: 1px 3px 1px 3px;
+                    margin-left: 3px;
+                }
+                .centered {
+                  position: absolute;
+                  top: 50%;
+                  left: 13%;
+                  transform: translate(-50%, -50%);
+                  color: white;
+                  font-size: 20px;
+                }
                 {{soundVisualizerCSS|safe}}
             </style>
 
