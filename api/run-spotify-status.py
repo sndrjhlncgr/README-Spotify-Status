@@ -10,10 +10,11 @@ SPOTIFY_URL_REFRESH_TOKEN = "https://accounts.spotify.com/api/token"
 SPOTIFY_URL_NOW_PLAYING = "https://api.spotify.com/v1/me/player/currently-playing"
 SPOTIFY_URL_RECENTLY_PLAY = "https://api.spotify.com/v1/me/player/recently-played?limit=10"
 
-SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
-SPOTIFY_SECRET_ID = os.getenv("SPOTIFY_SECRET_ID")
-SPOTIFY_REFRESH_TOKEN = os.getenv("SPOTIFY_REFRESH_TOKEN")
-SPOTIFY_BAR_COLOR = os.getenv("SPOTIFY_BAR_COLOR")
+
+SPOTIFY_CLIENT_ID = "70a153ec08c3465fa39e2f2b3ed6f19d"
+SPOTIFY_SECRET_ID = "69375ea0a426477293cbfdef99dcbde0"
+SPOTIFY_REFRESH_TOKEN = "AQDXZvg5_WVeraaPBQlyHfzsM2y1zekjGoi0UaDhhS18VcsyRFtvqQpZdUrNt7O0bdNrtO4waX3ZDHvCu9Dbz-xWSGA8RdSRsqV-k50__ouxpUntbTIiaxdFtwEe2l0BdxI"
+SPOTIFY_BAR_COLOR = "#fff"
 
 app = Flask(__name__, template_folder="components")
 
