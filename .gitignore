@@ -1,3 +1,4 @@
 .idea
 SECRET.txt
 images
+.env
