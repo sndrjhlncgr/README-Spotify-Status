@@ -60,7 +60,7 @@ def nowPlaying():
 
 def soundVisualizer(soundBars):
     soundVisualizerCSS = ""
-    START_BAR = 1700
+    START_BAR = 1700 # default: 1700
     ANIMATIONS = ['animation1', 'animation2', 'animation3']
     for NTH in range(1, soundBars + 1):
         START_BAR += 100
@@ -97,6 +97,7 @@ def makeSVG(data):
     else:
         item = data["item"]
 
+    duration = item["duration_ms"]
     musicLink = item["album"]["external_urls"]
     musicTime = convertMsToMin(item["duration_ms"])
     explicit = item["explicit"]
@@ -106,6 +107,7 @@ def makeSVG(data):
     spotifyIcon = loadImageB64("https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png")
 
     spotifyObject = {
+        "duration": duration,
         "soundVisualizerBar": soundVisualizerBar,
         "soundVisualizerCSS": soundVisualizerCSS,
         "artistName": artistName,

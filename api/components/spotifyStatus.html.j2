@@ -2,7 +2,9 @@
     <foreignObject width="480" height="133">
         <div xmlns="http://www.w3.org/1999/xhtml" class="container">
             <style>
-
+                body {
+                    margin: 0;
+                }
                 div {
                     font-family: Roboto;
                 }
@@ -112,7 +114,7 @@
                   display: flex;
                   -webkit-box-align: end;
                           align-items: flex-end;
-                  width: 100%;
+                  width: 50%;
                   height: 20px;
                   overflow: hidden;
                   -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='spectrograph' x='0' y='0' width='6px' height='4px' patternUnits='userSpaceOnUse'%3E%3Crect x='0' y='2px' width='6px' height='2px' fill='%23000'/%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23spectrograph)'%3E%3C/rect%3E%3C/svg%3E");
@@ -278,43 +280,63 @@
                   color: white;
                   font-size: 20px;
                 }
+                .duration {
+                    background-color:red;
+                    left: 50%;
+                }
                 {{soundVisualizerCSS|safe}}
             </style>
+             <body onload="startTimer({{duration}});">
+                 {% if songName %}
+                    <div class="main">
+                        <div class="ribbon">
+                            <span>
+                                <img src="data:image/png;base64, {{spotifyIcon}}" class="spotify-logo"/>
+                            </span>
+                        </div>
+                        <a class="art" href="{}" target="_BLANK">
+                            <center>
+                                    <img src="data:image/png;base64, {{albumCover}}" class="album-cover rotate" />
+                                    <div class="centered">⦿</div>
+                            </center>
+                        </a>
+                        <div class="text">
+                            <div class="song-info">
+                                <div class="song">{{songName}}</div>
+                                <div class="artist">{{artistName}}
+                                {% if explicit %}
+                                    <span class="explicit-music">EXPLICIT</span>
+                                {% endif %}
+                                </div>
+                            </div>
+                            <span class="duration">1:00</span>
+                            <div class="spectrograph">
+                                {{soundVisualizerBar|safe}}
+                            </div>
 
-            {% if songName %}
-
-            <div class="main">
-                <div class="ribbon">
-                    <span>
-                        <img src="data:image/png;base64, {{spotifyIcon}}" class="spotify-logo"/>
-                    </span>
-                </div>
-                <a class="art" href="{}" target="_BLANK">
-                    <center>
-                            <img src="data:image/png;base64, {{albumCover}}" class="album-cover rotate" />
-                            <div class="centered">⦿</div>
-                    </center>
-                </a>
-                <div class="text">
-                    <div class="song-info">
-                        <div class="song">{{songName}}</div>
-                        <div class="artist">{{artistName}}
-                        {% if explicit %}
-                            <span class="explicit-music">EXPLICIT</span>
-                        {% endif %}
                         </div>
                     </div>
-
-                    <div class="spectrograph">
-                        {{soundVisualizerBar|safe}}
-                    </div>
-                </div>
-
                 {% else %}
                     <div class="playing not-play">Nothing playing on Spotify</div>
                 {% endif %}
-            </div>
-
+             </body>
         </div>
+        <script>
+            function startTimer(duration) {
+              var minute = Math.floor(duration / 60000);
+              var sec = ((duration % 60000) / 1000).toFixed(0);
+              setInterval(function() {
+                console.log( minute + " : " + sec)
+                sec--;
+                if (sec == 00) {
+                  minute --;
+                  sec = 60;
+                  if (minute == 0) {
+                    minute = 5;
+                  }
+                }
+              }, 1000);
+            }
+        </script>
     </foreignObject>
 </svg>
