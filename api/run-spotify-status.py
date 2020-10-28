@@ -96,7 +96,7 @@ def makeSVG(data):
         item = recent_plays["items"][idx]["track"]
     else:
         item = data["item"]
-
+    print(item) # when ads on its None
     duration = item["duration_ms"]
     musicLink = item["album"]["external_urls"]
     musicTime = convertMsToMin(item["duration_ms"])

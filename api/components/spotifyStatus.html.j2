@@ -1,5 +1,5 @@
-<svg width="480" height="133" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <foreignObject width="480" height="133">
+<svg width="480" height="135" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <foreignObject width="480" height="135">
         <div xmlns="http://www.w3.org/1999/xhtml" class="container">
             <style>
                 body {
@@ -114,7 +114,7 @@
                   display: flex;
                   -webkit-box-align: end;
                           align-items: flex-end;
-                  width: 50%;
+                  width: 52%;
                   height: 20px;
                   overflow: hidden;
                   -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='spectrograph' x='0' y='0' width='6px' height='4px' patternUnits='userSpaceOnUse'%3E%3Crect x='0' y='2px' width='6px' height='2px' fill='%23000'/%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23spectrograph)'%3E%3C/rect%3E%3C/svg%3E");
@@ -214,11 +214,12 @@
                 }
 
                 .ribbon {
-                  position: absolute;
+                  position: absolute !important;
                   right: -5px; top: -5px;
                   z-index: 1;
                   overflow: hidden;
-                  width: 75px; height: 75px;
+                  width: 75px;
+                  height: 75px;
                   text-align: right;
                 }
                 .ribbon span {
@@ -257,6 +258,7 @@
                 }
 
                 .spotify-logo {
+                    z-index: 1;
                     width:52%;
                     height: 52%;
                     margin-bottom:-3px;
@@ -281,8 +283,18 @@
                   font-size: 20px;
                 }
                 .duration {
-                    background-color:red;
-                    left: 50%;
+                    font-family: Roboto;
+                    position:fixed;
+                    width:30px;
+                    margin-left: -50px;
+                    margin-top: 78px;
+
+                    background-color: #9c9c9c;
+                    border-radius: 5px;
+                    font-size: 13px;
+                    color:white;
+                    vertical-align: baseline;
+                    padding:2px 0px 2px 6px;
                 }
                 {{soundVisualizerCSS|safe}}
             </style>
@@ -309,11 +321,10 @@
                                 {% endif %}
                                 </div>
                             </div>
-                            <span class="duration">1:00</span>
                             <div class="spectrograph">
                                 {{soundVisualizerBar|safe}}
                             </div>
-
+                            <span id="music-time" class="duration">0:00</span>
                         </div>
                     </div>
                 {% else %}
@@ -325,18 +336,24 @@
             function startTimer(duration) {
               var minute = Math.floor(duration / 60000);
               var sec = ((duration % 60000) / 1000).toFixed(0);
-              setInterval(function() {
-                console.log( minute + " : " + sec)
+              var musicTimer = setInterval(function() {
+                if(minute == -1){
+                    minute = 0
+                    sec = 0
+                    clearInterval(musicTimer)
+                }
+                if(!(parseInt(sec.toString()) > 9)) {
+                    sec = "0" + parseInt(sec.toString())
+                }
+                document.querySelector('#music-time').textContent = minute + ":" + sec;
                 sec--;
                 if (sec == 00) {
                   minute --;
                   sec = 60;
-                  if (minute == 0) {
-                    minute = 5;
-                  }
                 }
               }, 1000);
             }
+
         </script>
     </foreignObject>
 </svg>
