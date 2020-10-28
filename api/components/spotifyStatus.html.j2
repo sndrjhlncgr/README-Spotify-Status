@@ -336,6 +336,7 @@
             function startTimer(duration) {
               var minute = Math.floor(duration / 60000);
               var sec = ((duration % 60000) / 1000).toFixed(0);
+              document.querySelector('#music-time').textContent = minute + ":" + sec;
               var musicTimer = setInterval(function() {
                 if(minute == -1){
                     minute = 0
