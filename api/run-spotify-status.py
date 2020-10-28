@@ -96,8 +96,9 @@ def makeSVG(data):
         item = recent_plays["items"][idx]["track"]
     else:
         item = data["item"]
-    print(item) # when ads on its None
+    print(item) # when ads on its None fix maybe
     duration = item["duration_ms"]
+    default_duration = convertMsToMin(duration)
     musicLink = item["album"]["external_urls"]
     musicTime = convertMsToMin(item["duration_ms"])
     explicit = item["explicit"]
@@ -108,6 +109,7 @@ def makeSVG(data):
 
     spotifyObject = {
         "duration": duration,
+        "default_duration": default_duration,
         "soundVisualizerBar": soundVisualizerBar,
         "soundVisualizerCSS": soundVisualizerCSS,
         "artistName": artistName,
