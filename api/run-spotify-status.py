@@ -47,9 +47,7 @@ def recentlyPlayed():
 
 def nowPlaying():
     token = refreshToken()
-
     headers = {"Authorization": f"Bearer {token}"}
-
     response = requests.get(SPOTIFY_URL_NOW_PLAYING, headers=headers)
 
     if response.status_code == 204:
@@ -60,7 +58,7 @@ def nowPlaying():
 
 def soundVisualizer(soundBars):
     soundVisualizerCSS = ""
-    START_BAR = 1700 # default: 1700
+    START_BAR = 1700  # default: 1700
     ANIMATIONS = ['animation1', 'animation2', 'animation3']
     for NTH in range(1, soundBars + 1):
         START_BAR += 100
@@ -84,19 +82,11 @@ def convertMsToMin(ms):
     return str("%d:%d" % (minutes, seconds))
 
 
-def makeSVG(data):
+def setSpotifyObject(item):
     soundBars = 41
     soundVisualizerBar = "".join(["<div class='spectrograph__bar'></div>" for i in range(soundBars)])
     soundVisualizerCSS = soundVisualizer(soundBars)
 
-    if data == {}:
-        recent_plays = recentlyPlayed()
-        size_recent_play = len(recent_plays["items"])
-        idx = random.randint(0, size_recent_play - 1)
-        item = recent_plays["items"][idx]["track"]
-    else:
-        item = data["item"]
-    print(item) # when ads on its None fix maybe
     duration = item["duration_ms"]
     default_duration = convertMsToMin(duration)
     musicLink = item["album"]["external_urls"]
@@ -121,6 +111,20 @@ def makeSVG(data):
         "musicTime": musicTime,
         "musicLink": musicLink
     }
+    return spotifyObject
+
+
+def makeSVG(data):
+    if data == {}:
+        recent_plays = recentlyPlayed()
+        size_recent_play = len(recent_plays["items"])
+        idx = random.randint(0, size_recent_play - 1)
+        item = recent_plays["items"][idx]["track"]
+    else:
+        item = data["item"]
+    print(item)  # when ads on its None fix maybe
+
+    spotifyObject = setSpotifyObject(item)
 
     return render_template("spotifyStatus.html.j2", **spotifyObject)
 
