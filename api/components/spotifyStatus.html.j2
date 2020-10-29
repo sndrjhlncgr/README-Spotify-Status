@@ -114,7 +114,7 @@
                   display: flex;
                   -webkit-box-align: end;
                           align-items: flex-end;
-                  width: 52%;
+                  width: {{spectrographWidth}}%;
                   height: 20px;
                   overflow: hidden;
                   -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='spectrograph' x='0' y='0' width='6px' height='4px' patternUnits='userSpaceOnUse'%3E%3Crect x='0' y='2px' width='6px' height='2px' fill='%23000'/%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23spectrograph)'%3E%3C/rect%3E%3C/svg%3E");
@@ -324,7 +324,9 @@
                             <div class="spectrograph">
                                 {{soundVisualizerBar|safe}}
                             </div>
-                            <span id="music-time" class="duration">{{default_duration}}</span>
+                             {% if enableDuration == 'True' %}
+                                    <span id="music-time" class="duration">{{default_duration}}</span>
+                             {% endif %}
                         </div>
                     </div>
                 {% else %}

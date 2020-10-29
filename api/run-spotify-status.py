@@ -14,6 +14,7 @@ SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
 SPOTIFY_SECRET_ID = os.getenv("SPOTIFY_SECRET_ID")
 SPOTIFY_REFRESH_TOKEN = os.getenv("SPOTIFY_REFRESH_TOKEN")
 SPOTIFY_BAR_COLOR = os.getenv("SPOTIFY_BAR_COLOR")
+SPOTIFY_ENABLE_DURATION = os.getenv("SPOTIFY_ENABLE_DURATION")
 
 app = Flask(__name__, template_folder="components")
 
@@ -82,6 +83,12 @@ def convertMsToMin(ms):
     return str("%d:%d" % (minutes, seconds))
 
 
+def spectrographWidth():
+    if SPOTIFY_ENABLE_DURATION == 'True':
+        return 52
+    return 98
+
+
 def setSpotifyObject(item):
     soundBars = 41
     soundVisualizerBar = "".join(["<div class='spectrograph__bar'></div>" for i in range(soundBars)])
@@ -98,6 +105,8 @@ def setSpotifyObject(item):
     spotifyIcon = loadImageB64("https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png")
 
     spotifyObject = {
+        "enableDuration": SPOTIFY_ENABLE_DURATION,
+        "spectrographWidth": spectrographWidth(),
         "duration": duration,
         "default_duration": default_duration,
         "soundVisualizerBar": soundVisualizerBar,
