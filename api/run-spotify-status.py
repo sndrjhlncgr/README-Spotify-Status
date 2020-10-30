@@ -103,6 +103,7 @@ def setSpotifyObject(item):
     artistName = item["artists"][0]["name"].replace("&", "&amp;")
     songName = item["name"].replace("&", "&amp;")
     spotifyIcon = loadImageB64("https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png")
+    viewAnimation = len(songName) > 27
 
     spotifyObject = {
         "enableDuration": SPOTIFY_ENABLE_DURATION,
@@ -113,6 +114,7 @@ def setSpotifyObject(item):
         "soundVisualizerCSS": soundVisualizerCSS,
         "artistName": artistName,
         "spotifyIcon": spotifyIcon,
+        "viewAnimation":viewAnimation,
         "songName": songName,
         "albumCover": albumCover,
         "barColor": SPOTIFY_BAR_COLOR,
