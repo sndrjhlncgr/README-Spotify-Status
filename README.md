@@ -25,7 +25,7 @@ Spotify for Developers
 * Find **Redirect URIs**:
     * Add `http://localhost/callback/`
 
-Get the Refresh Token from spotify
+Get the Refresh Token from Spotify
 -----
 
 * Navigate to the following URL:
