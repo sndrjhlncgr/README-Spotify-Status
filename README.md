@@ -72,6 +72,26 @@ Configure Vercel Application
 
 Put this in your README.md
 ------
+<h3>Small</h3>
+
+<img src="https://spotify-status.vercel.app/api/run-spotify-status" alt="s4nx Playing Now" width="350" />
+
+``` 
+[<img src="https://{DOMAIN_OF_YOUR_VERCEL_APP}/api/run-spotify-status" alt="Your alt what" width="350" />](LINK_TO_YOUR_ACCOUNT)
+```
+
+<h3>Medium</h3>
+
+<img src="https://spotify-status.vercel.app/api/run-spotify-status" alt="s4nx Playing Now" width="400" />
+
+``` 
+[<img src="https://{DOMAIN_OF_YOUR_VERCEL_APP}/api/run-spotify-status" alt="Your alt what" width="350" />](LINK_TO_YOUR_ACCOUNT)
+```
+
+<h3>Large</h3>
+
+<img src="https://spotify-status.vercel.app/api/run-spotify-status" alt="s4nx Playing Now" width="500" />
+
 ``` 
 [<img src="https://{DOMAIN_OF_YOUR_VERCEL_APP}/api/run-spotify-status" alt="Your alt what" width="350" />](LINK_TO_YOUR_ACCOUNT)
 ```
