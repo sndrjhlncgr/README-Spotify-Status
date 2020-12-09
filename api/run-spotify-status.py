@@ -126,6 +126,7 @@ def setSpotifyObject(item):
 
 
 def makeSVG(data):
+    print(data)
     if data == {}:
         recent_plays = recentlyPlayed()
         size_recent_play = len(recent_plays["items"])
