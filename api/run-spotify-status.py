@@ -15,6 +15,7 @@ SPOTIFY_SECRET_ID = os.getenv("SPOTIFY_SECRET_ID")
 SPOTIFY_REFRESH_TOKEN = os.getenv("SPOTIFY_REFRESH_TOKEN")
 SPOTIFY_BAR_COLOR = os.getenv("SPOTIFY_BAR_COLOR")
 SPOTIFY_ENABLE_DURATION = os.getenv("SPOTIFY_ENABLE_DURATION")
+SPOTIFY_BADGE_COLOR = os.getenv("SPOTIFY_BADGE_COLOR")
 
 app = Flask(__name__, template_folder="components")
 
@@ -89,6 +90,13 @@ def spectrographWidth():
     return 98
 
 
+def getSpotifyBadgeColor():
+    default = "#1DB954"
+    if SPOTIFY_BADGE_COLOR:
+        return SPOTIFY_BADGE_COLOR
+    return default
+
+
 def setSpotifyObject(item):
     soundBars = 41
     soundVisualizerBar = "".join(["<div class='spectrograph__bar'></div>" for i in range(soundBars)])
@@ -104,8 +112,10 @@ def setSpotifyObject(item):
     songName = item["name"].replace("&", "&amp;")
     spotifyIcon = loadImageB64("https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png")
     viewAnimation = len(songName) > 27
+    spotifyBadgeColor = getSpotifyBadgeColor()
 
     spotifyObject = {
+        "spotifyBadgeColor": spotifyBadgeColor,
         "enableDuration": SPOTIFY_ENABLE_DURATION,
         "spectrographWidth": spectrographWidth(),
         "duration": duration,
@@ -114,7 +124,7 @@ def setSpotifyObject(item):
         "soundVisualizerCSS": soundVisualizerCSS,
         "artistName": artistName,
         "spotifyIcon": spotifyIcon,
-        "viewAnimation":viewAnimation,
+        "viewAnimation": viewAnimation,
         "songName": songName,
         "albumCover": albumCover,
         "barColor": SPOTIFY_BAR_COLOR,

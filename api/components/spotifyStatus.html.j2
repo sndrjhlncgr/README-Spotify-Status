@@ -241,7 +241,7 @@
                       width: 100px;
                       display: block;
                       background: #79A70A;
-                      background: linear-gradient(#1DB954 0%, #1DB954 100%);
+                      background: {{ spotifyBadgeColor }};
                       box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
                       position: absolute;
                       top: 19px; right: -21px;
@@ -250,19 +250,19 @@
                   content: "";
                   position: absolute; left: 0px; top: 100%;
                   z-index: -1;
-                  border-left: 3px solid #1DB954;
+                  border-left: 3px solid {{ spotifyBadgeColor }};
                   border-right: 3px solid transparent;
                   border-bottom: 3px solid transparent;
-                  border-top: 3px solid #1DB954;
+                  border-top: 3px solid {{ spotifyBadgeColor }};
                 }
                 .ribbon span::after {
                   content: "";
                   position: absolute; right: 0px; top: 100%;
                   z-index: -1;
                   border-left: 3px solid transparent;
-                  border-right: 3px solid #1DB954;
+                  border-right: 3px solid {{ spotifyBadgeColor }};
                   border-bottom: 3px solid transparent;
-                  border-top: 3px solid #1DB954;
+                  border-top: 3px solid {{ spotifyBadgeColor }};
                 }
 
                 .spotify-logo {
