@@ -65,6 +65,8 @@ Configure Vercel Application
      - `Hex Color Don't Include #`
   - `SPOTIFY_ENABLE_DURATION` => `Not Working properly, set to ```False```
      - `True or False`
+  - 🆕`SPOTIFY_BADGE_COLOR`
+    - `Hex Color`
         
   ![Vercel](https://i.ibb.co/vv5z4yP/Untitled.png)
   
