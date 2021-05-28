@@ -54,6 +54,12 @@ Configure Vercel Application
 * Register on [Vercel](https://vercel.com/)
 
 * Create project linked to your forked respository
+
+   **OR**
+
+* Just click in the deploy button to make an easier setup
+
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsndrjhlncgr%2FREADME-Spotify-Status&env=SPOTIFY_REFRESH_TOKEN,SPOTIFY_CLIENT_ID,SPOTIFY_SECRET_ID,SPOTIFY_BAR_COLOR,SPOTIFY_ENABLE_DURATION,SPOTIFY_BADGE_COLOR&envDescription=Add%20Project%20Name%20and%20Environment%20Variables)
   
   ![Vercel](https://i.ibb.co/sHhywHD/dasddas.jpg)
 
