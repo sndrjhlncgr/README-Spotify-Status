@@ -60,10 +60,10 @@ Configure Vercel Application
 * Add Project Name and Environment Variables:
   - `SPOTIFY_REFRESH_TOKEN`
   - `SPOTIFY_CLIENT_ID`
-  - `SPOTIFY_SECRET_ID`
+  - `SPOTIFY_SECRET`
   - `SPOTIFY_BAR_COLOR` 
      - `Hex Color`
-  - 🆕`SPOTIFY_BADGE_COLOR`
+  - `SPOTIFY_BADGE_COLOR`
     - `Hex Color`
         
   ![Vercel](https://i.ibb.co/vv5z4yP/Untitled.png)
