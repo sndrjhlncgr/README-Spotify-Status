@@ -62,9 +62,7 @@ Configure Vercel Application
   - `SPOTIFY_CLIENT_ID`
   - `SPOTIFY_SECRET_ID`
   - `SPOTIFY_BAR_COLOR` 
-     - `Hex Color Don't Include #`
-  - `SPOTIFY_ENABLE_DURATION` => `Not Working properly, set to ```False```
-     - `True or False`
+     - `Hex Color`
   - 🆕`SPOTIFY_BADGE_COLOR`
     - `Hex Color`
         

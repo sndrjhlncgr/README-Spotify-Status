@@ -115,7 +115,7 @@
                     }
                 }
                 .spectrograph {
-                    color: #{{barColor|safe}};
+                    color: {{barColor|safe}};
                 }
                 .spectrograph {
                   bottom: 19px;
@@ -335,7 +335,7 @@
 
                 {{soundVisualizerCSS|safe}}
             </style>
-             <body onload="startTimer({{duration}});">
+             <body>
                  {% if songName %}
                     <div class="main">
                         <div class="ribbon">
@@ -382,28 +382,5 @@
                 {% endif %}
              </body>
         </div>
-        <script>
-            function startTimer(duration) {
-              var minute = Math.floor(duration / 60000);
-              var sec = ((duration % 60000) / 1000).toFixed(0);
-              var musicTimer = setInterval(function() {
-                if(minute == -1){
-                    minute = 0
-                    sec = 0
-                    clearInterval(musicTimer)
-                }
-                if(!(parseInt(sec.toString()) > 9)) {
-                    sec = "0" + parseInt(sec.toString())
-                }
-                document.querySelector('#music-time').textContent = minute + ":" + sec;
-                sec--;
-                if (sec == 00) {
-                  minute --;
-                  sec = 60;
-                }
-              }, 1000);
-            }
-
-        </script>
     </foreignObject>
 </svg>
