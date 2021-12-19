@@ -98,9 +98,6 @@ def setSpotifyObject(item):
     soundBars = 41
     soundVisualizerBar = "".join(["<div class='spectrograph__bar'></div>" for i in range(soundBars)])
     soundVisualizerCSS = soundVisualizer(soundBars)
-
-    duration = item["duration_ms"]
-    default_duration = convertMsToMin(duration)
     musicLink = item["album"]["external_urls"]
     musicTime = convertMsToMin(item["duration_ms"])
     explicit = item["explicit"]
@@ -114,8 +111,6 @@ def setSpotifyObject(item):
     spotifyObject = {
         "spotifyBadgeColor": spotifyBadgeColor,
         "spectrographWidth": spectrographWidth(),
-        "duration": duration,
-        "default_duration": default_duration,
         "soundVisualizerBar": soundVisualizerBar,
         "soundVisualizerCSS": soundVisualizerCSS,
         "artistName": artistName,
