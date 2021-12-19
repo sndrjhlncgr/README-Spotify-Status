@@ -132,7 +132,6 @@ def setSpotifyObject(item):
 
 
 def makeSVG(data):
-    print(data)
     if data == {}:
         recent_plays = recentlyPlayed()
         size_recent_play = len(recent_plays["items"])
@@ -140,7 +139,6 @@ def makeSVG(data):
         item = recent_plays["items"][idx]["track"]
     else:
         item = data["item"]
-    print(item)  # when ads on its None fix maybe
 
     spotifyObject = setSpotifyObject(item)
 
