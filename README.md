@@ -11,7 +11,7 @@
 ![Image of Sandro Cagara](https://i.ibb.co/Tmjxnhs/README-Spotify-Status-v2.jpg)
 <p align="center">
    <h3>Demo</h3>
-   <img src="https://spotify-status.vercel.app/api/run-spotify-status" alt="s4nx Playing Now" width="500" />
+   <img src="https://readme-spotify-status-rho.vercel.app/api/run-spotify-status.py" alt="s4nx Playing Now" width="500" />
 <p align="center">
 
 Spotify for Developers
@@ -74,7 +74,7 @@ Put this in your README.md
 ------
 <h3>Small</h3>
 
-<img src="https://spotify-status.vercel.app/api/run-spotify-status" alt="s4nx Playing Now" width="350" />
+<img src="https://readme-spotify-status-rho.vercel.app/api/run-spotify-status.py" alt="s4nx Playing Now" width="350" />
 
 ``` 
 [<img src="https://{DOMAIN_OF_YOUR_VERCEL_APP}/api/run-spotify-status" alt="Your alt what" width="350" />](LINK_TO_YOUR_ACCOUNT)
@@ -82,7 +82,7 @@ Put this in your README.md
 
 <h3>Medium</h3>
 
-<img src="https://spotify-status.vercel.app/api/run-spotify-status" alt="s4nx Playing Now" width="400" />
+<img src="https://readme-spotify-status-rho.vercel.app/api/run-spotify-status.py" alt="s4nx Playing Now" width="400" />
 
 ``` 
 [<img src="https://{DOMAIN_OF_YOUR_VERCEL_APP}/api/run-spotify-status" alt="Your alt what" width="400" />](LINK_TO_YOUR_ACCOUNT)
@@ -90,7 +90,7 @@ Put this in your README.md
 
 <h3>Large</h3>
 
-<img src="https://spotify-status.vercel.app/api/run-spotify-status" alt="s4nx Playing Now" width="500" />
+<img src="https://readme-spotify-status-rho.vercel.app/api/run-spotify-status.py" alt="s4nx Playing Now" width="500" />
 
 ``` 
 [<img src="https://{DOMAIN_OF_YOUR_VERCEL_APP}/api/run-spotify-status" alt="Your alt what" width="500" />](LINK_TO_YOUR_ACCOUNT)
