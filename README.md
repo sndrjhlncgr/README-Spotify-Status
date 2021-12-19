@@ -58,6 +58,7 @@ Configure Vercel Application
   ![Vercel](https://i.ibb.co/sHhywHD/dasddas.jpg)
 
 * Add Project Name and Environment Variables:
+   Warning: Avoid white spaces!!
   - `SPOTIFY_REFRESH_TOKEN`
   - `SPOTIFY_CLIENT_ID`
   - `SPOTIFY_SECRET`
