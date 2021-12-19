@@ -16,7 +16,6 @@ SPOTIFY_REFRESH_TOKEN = os.getenv("SPOTIFY_REFRESH_TOKEN")
 SPOTIFY_BAR_COLOR = os.getenv("SPOTIFY_BAR_COLOR")
 SPOTIFY_BADGE_COLOR = os.getenv("SPOTIFY_BADGE_COLOR")
 
-
 app = Flask(__name__, template_folder="components")
 
 
