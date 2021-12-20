@@ -55,7 +55,7 @@ Configure Vercel Application
 
 * Create project linked to your forked respository
    <br/>
-  **Note**:  set Framework Preset: Other
+  **Note**:  set Framework Preset to 'Other'
   
   ![Vercel](https://i.ibb.co/sHhywHD/dasddas.jpg)
 
