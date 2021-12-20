@@ -54,6 +54,7 @@ Configure Vercel Application
 * Register on [Vercel](https://vercel.com/)
 
 * Create project linked to your forked respository
+   Note: set Framework Preset: Other
   
   ![Vercel](https://i.ibb.co/sHhywHD/dasddas.jpg)
 
