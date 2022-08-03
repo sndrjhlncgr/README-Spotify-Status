@@ -17,11 +17,10 @@
 
 <br>
 
-
-<h2 align="center">
-   <h2 align="center"><strong>Spotify Status (README)</strong></h2>
-   <p align="center">View what you listen at spotify.</p>
-</h2>
+<div align="center">
+<h1 >Spotify Status (README)</h1>
+<p align="center">View what you listen at spotify.</p>
+</div>
 
 
 
