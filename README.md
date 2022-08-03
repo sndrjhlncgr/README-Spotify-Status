@@ -16,8 +16,14 @@
 > THANK YOU!
 
 <br>
-<h1 align="center">Spotify Status (README)</h1>
-<p align="center">View what you listen at spotify.</p>
+
+
+<h2 align="center">
+   <h2 align="center"><strong>Spotify Status (README)</strong></h2>
+   <p align="center">View what you listen at spotify.</p>
+</h2>
+
+
 
 <p align="center">
    <a href="https://github.com/sndrjhlncgr/README-Spotify-Status/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/sndrjhlncgr/README-Spotify-Status"></a>
