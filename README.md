@@ -86,7 +86,7 @@ Configure Vercel Application
    Warning: Avoid white spaces!!
   - `SPOTIFY_REFRESH_TOKEN`
   - `SPOTIFY_CLIENT_ID`
-  - `SPOTIFY_SECRET`
+  - `SPOTIFY_SECRET_ID`
   - `SPOTIFY_BAR_COLOR` 
      - `Hex Color`
   - `SPOTIFY_BADGE_COLOR`
